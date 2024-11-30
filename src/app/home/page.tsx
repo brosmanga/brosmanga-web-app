@@ -1,42 +1,11 @@
-import Aside from "@/components/Aside";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-// import DynamicTable from "@/components/DynamicTable";
-
-// const columns = [
-//   { header: "Nome", accessorKey: "nome" },
-//   { header: "Idade", accessorKey: "idade" },
-//   { header: "Cidade", accessorKey: "cidade" }
-// ];
-
-// const data = [
-//   { nome: "John", idade: 30, cidade: "New York" },
-//   { nome: "Batman", idade: 25, cidade: "San Francisco" },
-//   { nome: "Lucas", idade: 30, cidade: "New York" },
-//   { nome: "Batman", idade: 25, cidade: "San Francisco" },
-//   { nome: "Lucas", idade: 30, cidade: "New York" },
-//   { nome: "Robin", idade: 25, cidade: "San Francisco" },
-//   { nome: "Lucas", idade: 30, cidade: "New York" },
-//   { nome: "Robin", idade: 25, cidade: "San Francisco" },
-//   { nome: "John", idade: 30, cidade: "New York" },
-//   { nome: "Robin", idade: 25, cidade: "San Francisco" },
-//   { nome: "Coringa", idade: 30, cidade: "New York" },
-//   { nome: "Jane", idade: 25, cidade: "San Francisco" },
-//   { nome: "Coringa", idade: 30, cidade: "New York" },
-//   { nome: "Jane", idade: 25, cidade: "San Francisco" },
-//   { nome: "Coringa", idade: 30, cidade: "New York" },
-//   { nome: "Jane", idade: 25, cidade: "San Francisco" },
-//   { nome: "John", idade: 30, cidade: "New York" },
-//   { nome: "Jane", idade: 25, cidade: "San Francisco" }
-// ];
 
 export default function Page() {
   return (
     <div className="page-layout">
-        <Header/>
-
-      <main className="main-layout">
-      </main>
+      <Header/>
+      <main className="main-layout"></main>
       <Footer/>
     </div>
   );
