@@ -2,7 +2,6 @@ import React from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AboutContent from "@/components/AboutContent";
-import { useRouter } from "next/navigation";
 
 const AboutPage: React.FC = () => {
   return (
