@@ -74,7 +74,7 @@ const Login: React.FC = () => {
           />
         </div>
 
-        <div className="relative z-10 w-full max-w-md bg-black/75 p-6 rounded-xl shadow-lg text-white">
+        <div className="relative z-10 w-full max-w-md bg-black/75 p-6 rounded-xl shadow-lg">
 
           {/* Logo */}
           <div className="w-full flex items-center justify-center mb-4">
@@ -90,7 +90,7 @@ const Login: React.FC = () => {
                 name="name"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Nome</FormLabel>
+                    <FormLabel className="text-white">Nome</FormLabel>
                     <FormControl>
                       <Input disabled={isPending} {...field} />
                     </FormControl>
@@ -105,7 +105,7 @@ const Login: React.FC = () => {
                 name="username"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Nome de Usuário</FormLabel>
+                    <FormLabel className="text-white">Nome de Usuário</FormLabel>
                     <FormControl>
                       <Input disabled={isPending} {...field} />
                     </FormControl>
@@ -120,7 +120,7 @@ const Login: React.FC = () => {
                 name="email"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>E-mail</FormLabel>
+                    <FormLabel className="text-white">E-mail</FormLabel>
                     <FormControl>
                       <Input disabled={isPending} {...field} />
                     </FormControl>
@@ -136,7 +136,7 @@ const Login: React.FC = () => {
                   name="password"
                   render={({ field }) => (
                     <FormItem className="flex-1">
-                      <FormLabel>Senha</FormLabel>
+                      <FormLabel className="text-white">Senha</FormLabel>
                       <FormControl>
                         <Input disabled={isPending} type="password" {...field} />
                       </FormControl>
@@ -151,7 +151,7 @@ const Login: React.FC = () => {
                   name="confirmPassword"
                   render={({ field }) => (
                     <FormItem className="flex-1">
-                      <FormLabel>Confirmar Senha</FormLabel>
+                      <FormLabel className="text-white">Confirmar Senha</FormLabel>
                       <FormControl>
                         <Input disabled={isPending} type="password" {...field} />
                       </FormControl>
@@ -167,7 +167,7 @@ const Login: React.FC = () => {
                 name="birthDate"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Data de Nascimento</FormLabel>
+                    <FormLabel className="text-white">Data de Nascimento</FormLabel>
                     <FormControl>
                       <Input disabled={isPending} placeholder="DD/MM/AAAA" {...field} />
                     </FormControl>
@@ -182,7 +182,7 @@ const Login: React.FC = () => {
                 name="phone"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Número de Telefone</FormLabel>
+                    <FormLabel className="text-white">Número de Telefone</FormLabel>
                     <FormControl>
                       <Input disabled={isPending} {...field} />
                     </FormControl>

@@ -59,7 +59,7 @@ const Login: React.FC = () => {
           />
         </div>
 
-        <div className="relative z-10 w-full max-w-md bg-black/75 p-6 rounded-xl shadow-lg text-white">
+        <div className="relative z-10 w-full max-w-md bg-black/75 p-6 rounded-xl shadow-lg">
 
           {/* Logo */}
           <div className="w-full flex items-center justify-center mb-4">
@@ -74,13 +74,13 @@ const Login: React.FC = () => {
 
           {/* Form */}
           <Form {...form}>
-            <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4 mt-4">
+            <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4 mt-4 ">
               <FormField
                 control={form.control}
                 name="email"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Nome de Usuário/E-mail</FormLabel>
+                    <FormLabel className="text-white">Nome de Usuário/E-mail</FormLabel>
                     <FormControl>
                       <Input disabled={isPending} {...field} />
                     </FormControl>
@@ -93,7 +93,7 @@ const Login: React.FC = () => {
                 name="password"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Senha</FormLabel>
+                    <FormLabel className="text-white">Senha</FormLabel>
                     <FormControl>
                       <Input disabled={isPending} type="password" {...field} />
                     </FormControl>
