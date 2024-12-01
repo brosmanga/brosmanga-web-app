@@ -1,15 +1,19 @@
-"use client";
-import React from "react";
+"use client"
+import React, { useEffect, useState } from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { signOut, useSession } from "next-auth/react";
 import { Button } from "../ui/button";
 import { Skeleton } from "../ui/skeleton";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 
 const Header: React.FC = () => {
   const session = useSession();
   const router = useRouter();
+  const pathname = usePathname();
+
+  const activeRedButton = (route: string) => pathname === route ? "bg-red-600 text-white" : "bg-transparent text-red-400";
+  
   return (
     <header className="bg-black text-white py-3 px-6 shadow-md">
       <div className="container mx-auto flex items-center justify-between">
@@ -21,13 +25,13 @@ const Header: React.FC = () => {
 
         {/* Navegação */}
         <nav className="flex items-center space-x-4">
-          <button className="bg-red-600 text-white py-1 px-4 rounded-full hover:bg-red-500" onClick={() => router.push('/home')}>
+          <button className={`border-2 border-red-500 ${activeRedButton("/home")} text-white py-1 px-4 rounded-full hover:bg-red-500`} onClick={() => router.push('/home')}>
             Home
           </button>
-          <button className="border-2 border-red-500 text-white py-1 px-4 rounded-full hover:bg-red-500 hover:text-white" onClick={() => router.push('/auth/login')}>
+          <button className={`border-2 border-red-500 ${activeRedButton("/series")}  text-white py-1 px-4 rounded-full hover:bg-red-500 hover:text-white`} onClick={() => router.push('/auth/login')}>
             Séries
           </button>
-          <button className="border-2 border-red-500 text-white py-1 px-4 rounded-full hover:bg-red-500 hover:text-white" onClick={() => router.push('/about')}>
+          <button className={`border-2 border-red-500 ${activeRedButton("/about")} text-white py-1 px-4 rounded-full hover:bg-red-500 hover:text-white`} onClick={() => router.push('/about')}>
             Sobre
           </button>
           <button className="bg-yellow-500 text-black py-1 px-4 rounded-full hover:bg-yellow-400 font-semibold">
@@ -53,7 +57,7 @@ const Header: React.FC = () => {
             >
               {/* Informações do usuário */}
               <div className="px-4 py-2 border-b border-gray-700">
-                <p className="text-sm font-bold">Marcos Paulo Silva de Souza</p>
+                <p className="text-sm font-bold">Fabiano Barros Rocha</p>
                 <p className="text-xs text-red-500">@zzayaya</p>
               </div>
 
