@@ -17,7 +17,7 @@ const SideList: FC<{
           key={item.id}
           className="flex items-center gap-4 p-2 bg-white dark:bg-gray-800 rounded-md shadow-md hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
         >
-          <Link href={`/mangas/${item.id}`} className="flex items-center gap-4">
+          <Link href={`/series/${item.id}`} className="flex items-center gap-4">
             <img
               src={item.image}
               alt={item.title}

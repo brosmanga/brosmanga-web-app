@@ -11,24 +11,24 @@ import './home.css'
 
 export default function Page() {
   const continueReading = [
-    { id: "1", title: 'Black Bullet', image: '/images/mangas/black_bullet.png' },
-    { id: "2", title: 'Alice in Murderland', image: '/images/mangas/alice.png' },
-    { id: "3", title: 'Chainsaw Man', image: '/images/mangas/chainsaw_man.png' },
-    { id: "4", title: 'Cigarette and Cherry', image: '/images/mangas/cigarette_and_cherry.png' },
-    { id: "5", title: 'Yakeko Shoujo', image: '/images/mangas/yakedo_syoju.png' },
-    { id: "6", title: 'Perfect Blue', image: '/images/mangas/perfect_blue.png' },
+    { id: "1", title: 'Black Bullet', image: '/images/series/black_bullet.png' },
+    { id: "2", title: 'Alice in Murderland', image: '/images/series/alice.png' },
+    { id: "3", title: 'Chainsaw Man', image: '/images/series/chainsaw_man.png' },
+    { id: "4", title: 'Cigarette and Cherry', image: '/images/series/cigarette_and_cherry.png' },
+    { id: "5", title: 'Yakeko Shoujo', image: '/images/series/yakedo_syoju.png' },
+    { id: "6", title: 'Perfect Blue', image: '/images/series/perfect_blue.png' },
   ];
 
   const newUpdates = [
-    { id: "4", title: 'Cigarette and Cherry', image: '/images/mangas/cigarette_and_cherry.png' },
-    { id: "5", title: 'Yakeko Shoujo', image: '/images/mangas/yakedo_syoju.png' },
-    { id: "6", title: 'Perfect Blue', image: '/images/mangas/perfect_blue.png' },
+    { id: "4", title: 'Cigarette and Cherry', image: '/images/series/cigarette_and_cherry.png' },
+    { id: "5", title: 'Yakeko Shoujo', image: '/images/series/yakedo_syoju.png' },
+    { id: "6", title: 'Perfect Blue', image: '/images/series/perfect_blue.png' },
   ];
 
   const recommendations = [
-    { id: "7", title: 'Yuji Kaku', image: '/images/mangas/yuji_kaku.png' },
-    { id: "8", title: 'Demon Slayer', image: '/images/mangas/demon_slayer.png' },
-    { id: "9", title: 'Parasite in Love', image: '/images/mangas/parasite_in_love.png' },
+    { id: "7", title: 'Yuji Kaku', image: '/images/series/yuji_kaku.png' },
+    { id: "8", title: 'Demon Slayer', image: '/images/series/demon_slayer.png' },
+    { id: "9", title: 'Parasite in Love', image: '/images/series/parasite_in_love.png' },
   ];
 
   const mostViewed = [
@@ -36,19 +36,19 @@ export default function Page() {
       id: "1",
       title: 'Black Bullet',
       details: '657 mil visualizações',
-      image: '/images/mangas/black_bullet.png',
+      image: '/images/series/black_bullet.png',
     },
     {
       id: "10",
       title: 'Skeleton In The Closet',
       details: '530 mil visualizações',
-      image: '/images/mangas/skeleton_in_the_closet.png',
+      image: '/images/series/skeleton_in_the_closet.png',
     },
     {
       id: "11",
       title: 'Soul Eater',
       details: '467 mil visualizações',
-      image: '/images/mangas/soul_eater.png',
+      image: '/images/series/soul_eater.png',
     },
   ];
 
@@ -57,19 +57,19 @@ export default function Page() {
       id: "8",
       title: 'Demon Slayer',
       details: '4.9',
-      image: '/images/mangas/demon_slayer.png',
+      image: '/images/series/demon_slayer.png',
     },
     {
       id: "9",
       title: 'Parasite in Love',
       details: '4.7',
-      image: '/images/mangas/parasite_in_love.png',
+      image: '/images/series/parasite_in_love.png',
     },
     {
       id: "12",
       title: 'Transorbton',
       details: '4.6',
-      image: '/images/mangas/transorbton.png',
+      image: '/images/series/transorbton.png',
     },
   ];
 
