@@ -1,0 +1,15 @@
+.carousel-wrapper {
+  @apply w-full overflow-x-hidden;
+}
+
+.carousel-container {
+  @apply max-w-full overflow-hidden relative;
+}
+
+.p-carousel-content {
+  @apply flex justify-between gap-4 w-full max-w-full overflow-hidden;
+}
+
+.p-carousel-item {
+  @apply flex-shrink-0 flex-grow-0 w-auto;
+}
