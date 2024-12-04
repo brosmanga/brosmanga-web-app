@@ -7,7 +7,7 @@ const MangaCard: FC<{ id: string; title: string; image: string; subtitle?: strin
   image,
   subtitle,
 }) => (
-  <Link href={`/mangas/${id}`} className="block w-36 p-2 shadow-lg rounded-md bg-white dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+  <Link href={`/series/details/${id}`} className="block w-36 p-2 shadow-lg rounded-md bg-white dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
     <img
       src={image}
       alt={title}

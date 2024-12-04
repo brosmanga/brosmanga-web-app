@@ -12,7 +12,9 @@ const Header: React.FC = () => {
   const router = useRouter();
   const pathname = usePathname();
 
-  const activeRedButton = (route: string) => pathname === route ? "bg-red-600 text-white" : "bg-transparent text-red-400";
+  console.log(pathname.split('/'))
+
+  const activeRedButton = (route: string) => pathname.split('/')[1] === route ? "bg-red-600 text-white" : "bg-transparent text-red-400";
   
   return (
     <header className="bg-black text-white py-3 px-6 shadow-md">
@@ -25,13 +27,13 @@ const Header: React.FC = () => {
 
         {/* Navegação */}
         <nav className="flex items-center space-x-4">
-          <button className={`border-2 border-red-500 ${activeRedButton("/home")} text-white py-1 px-4 rounded-full hover:bg-red-500`} onClick={() => router.push('/home')}>
+          <button className={`border-2 border-red-500 ${activeRedButton("home")} text-white py-1 px-4 rounded-full hover:bg-red-500`} onClick={() => router.push('/home')}>
             Home
           </button>
-          <button className={`border-2 border-red-500 ${activeRedButton("/series")}  text-white py-1 px-4 rounded-full hover:bg-red-500 hover:text-white`} onClick={() => router.push('/auth/login')}>
+          <button className={`border-2 border-red-500 ${activeRedButton("series")}  text-white py-1 px-4 rounded-full hover:bg-red-500 hover:text-white`} onClick={() => router.push('/series/all')}>
             Séries
           </button>
-          <button className={`border-2 border-red-500 ${activeRedButton("/about")} text-white py-1 px-4 rounded-full hover:bg-red-500 hover:text-white`} onClick={() => router.push('/about')}>
+          <button className={`border-2 border-red-500 ${activeRedButton("about")} text-white py-1 px-4 rounded-full hover:bg-red-500 hover:text-white`} onClick={() => router.push('/about')}>
             Sobre
           </button>
           <button className="bg-yellow-500 text-black py-1 px-4 rounded-full hover:bg-yellow-400 font-semibold">

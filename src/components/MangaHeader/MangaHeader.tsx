@@ -1,6 +1,15 @@
 import { FC } from 'react';
 
-const MangaHeader: FC<{ title: string; authors: string[]; genres: string[]; image: string; }> = ({ title, authors, genres, image }) => {
+interface MangaHeaderProps {
+  title: string;
+  authors: string; // Array de strings para múltiplos autores
+  genres: string[]; // Array de strings para os gêneros
+  image: string; // URL da imagem
+  rating: number; // Nota do mangá
+  favoriteButton?: boolean; // Opcional: Se o botão de favoritos deve ser exibido
+}
+
+const MangaHeader: FC<MangaHeaderProps> = ({ title, authors, genres, image, rating, favoriteButton }) => {
   return (
     <div className="flex flex-col lg:flex-row gap-6">
       <div className="w-full lg:w-1/4">
@@ -16,12 +25,17 @@ const MangaHeader: FC<{ title: string; authors: string[]; genres: string[]; imag
             </span>
           ))}
         </div>
-        <button className="mt-4 bg-red-500 text-white px-4 py-2 rounded-md">
-          Adicionar aos favoritos
-        </button>
+        <div className="mt-4">
+          <p className="text-lg font-bold">Nota: {rating.toFixed(1)} ⭐</p>
+        </div>
+        {favoriteButton && (
+          <button className="mt-4 bg-red-500 text-white px-4 py-2 rounded-md">
+            Adicionar aos favoritos
+          </button>
+        )}
       </div>
     </div>
   );
-}
+};
 
-export default MangaHeader
+export default MangaHeader;
