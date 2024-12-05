@@ -44,7 +44,7 @@ const Login: React.FC = () => {
   }
 
   return (
-    <div className="relative bg-[url('/images/background.jpg')] bg-cover bg-center min-h-screen flex items-center justify-center">
+    <div className="relative bg-[url('/images/background_escuro.png')] bg-cover bg-center min-h-screen flex items-center justify-center">
         
 
       <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
