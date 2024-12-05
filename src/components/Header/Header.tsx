@@ -60,7 +60,7 @@ const Header: React.FC = () => {
               {/* Informações do usuário */}
               <div className="px-4 py-2 border-b border-gray-700">
                 <p className="text-sm font-bold">Fabiano Barros Rocha</p>
-                <p className="text-xs text-red-500">@zzayaya</p>
+                <p className="text-xs text-red-500">@berzerkzs</p>
               </div>
 
               {/* Links do Menu */}
