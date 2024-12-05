@@ -1,7 +1,7 @@
 import MangaHeader from '@/components/MangaHeader';
 import ChapterTable from '@/components/ChapterTable';
 import Header from '@/components/Header';
-import RecommendationList from '@/components/RecommendationList/RecommendationList';
+import RecommendationList from '@/components/RecommendationList';
 import Footer from '@/components/Footer';
 
 interface MangaDetailsPageProps {
@@ -14,7 +14,7 @@ interface MangaDetailsPageProps {
 async function fetchManga(id: string) {
   return {
     id: 9,
-    title: "Sinopse In love",
+    title: "Parasite In love",
     author: "Rapha Pinheiro",
     genres: ["Ação", "Mistério"],
     image: "/images/series/parasite_in_love.png",
@@ -24,7 +24,7 @@ async function fetchManga(id: string) {
       {
         title: "Capítulo 1",
         date: "27 de Agosto de 2012",
-        growthImage: "/path-to-growth-image.jpg"
+        image: "/path-to-growth-image.jpg"
       }
     ],
     recommendations: [
@@ -86,7 +86,6 @@ export default async function Page({ params }: MangaDetailsPageProps) {
           </div>
         </div>
       </main>
-
       <Footer/>
     </div>
   );

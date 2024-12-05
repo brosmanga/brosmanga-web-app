@@ -96,7 +96,6 @@ const Header: React.FC = () => {
             </PopoverContent>
           </Popover>
         </div>
-
       </div>
    
       {/* Linha Vermelha */}

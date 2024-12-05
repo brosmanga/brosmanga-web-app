@@ -11,6 +11,7 @@ import './home.css'
 
 export default function Page() {
   const continueReading = [
+    { id: "9", title: 'Parasite in Love', image: '/images/series/parasite_in_love.png' },
     { id: "1", title: 'Black Bullet', image: '/images/series/black_bullet.png' },
     { id: "2", title: 'Alice in Murderland', image: '/images/series/alice.png' },
     { id: "3", title: 'Chainsaw Man', image: '/images/series/chainsaw_man.png' },
@@ -20,6 +21,8 @@ export default function Page() {
   ];
 
   const newUpdates = [
+    { id: "12", title: 'Transorbton', image: '/images/series/transorbton.png',},
+    { id: "9", title: 'Parasite in Love', image: '/images/series/parasite_in_love.png' },
     { id: "4", title: 'Cigarette and Cherry', image: '/images/series/cigarette_and_cherry.png' },
     { id: "5", title: 'Yakeko Shoujo', image: '/images/series/yakedo_syoju.png' },
     { id: "6", title: 'Perfect Blue', image: '/images/series/perfect_blue.png' },
@@ -28,7 +31,8 @@ export default function Page() {
   const recommendations = [
     { id: "7", title: 'Yuji Kaku', image: '/images/series/yuji_kaku.png' },
     { id: "8", title: 'Demon Slayer', image: '/images/series/demon_slayer.png' },
-    { id: "9", title: 'Parasite in Love', image: '/images/series/parasite_in_love.png' },
+    { id: "12", title: 'Transorbton', image: '/images/series/transorbton.png'},
+    { id: "10", title: 'Skeleton In The Closet', image: '/images/series/skeleton_in_the_closet.png'}
   ];
 
   const mostViewed = [
@@ -121,27 +125,38 @@ export default function Page() {
                 </Section>
               </div>
 
-              <Section title="Novas Atualizações" icon={<FaFire className="text-red-500" />}>
-                {newUpdates.map((manga) => (
-                  <MangaCard
-                    key={manga.id}
-                    id={manga.id}
-                    title={manga.title}
-                    image={manga.image}
-                  />
-                ))}
-              </Section>
+              <div className="carousel-wrapper">
+                <Section title="Novas Atualizações" icon={<FaFire className="text-red-500" />}>
+                  <div className="carousel-container">
+                    <Carousel
+                      value={newUpdates}
+                      numVisible={4}
+                      numScroll={2}
+                      responsiveOptions={responsiveOptions}
+                      itemTemplate={(item) => <MangaCard {...item} />}
+                      prevIcon={<FaChevronLeft className="text-4xl text-gray-800" />}
+                      nextIcon={<FaChevronRight className="text-4xl text-gray-800" />}
+                    />
+                  </div>
+                </Section>
+              </div>
 
-              <Section title="Recomendações" icon={<FaStar className="text-yellow-500" />}>
-                {recommendations.map((manga) => (
-                  <MangaCard
-                    key={manga.id}
-                    id={manga.id}
-                    title={manga.title}
-                    image={manga.image}
-                  />
-                ))}
-              </Section>
+              <div className="carousel-wrapper">
+                <Section title="Recomendações" icon={<FaStar className="text-yellow-500" />}>
+                  <div className="carousel-container">
+                    <Carousel
+                        value={recommendations}
+                        numVisible={4}
+                        numScroll={2}
+                        responsiveOptions={responsiveOptions}
+                        itemTemplate={(item) => <MangaCard {...item} />}
+                        prevIcon={<FaChevronLeft className="text-4xl text-gray-800" />}
+                        nextIcon={<FaChevronRight className="text-4xl text-gray-800" />}
+                      />
+                  </div>
+                </Section>
+              </div>
+              
             </div>
 
             <div>

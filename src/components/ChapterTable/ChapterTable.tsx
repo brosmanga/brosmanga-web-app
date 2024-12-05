@@ -1,4 +1,16 @@
-export default function ChapterTable({ chapters }) {
+interface Chapter {
+  title: string,
+  date: string,
+  image: string
+  
+}
+
+interface ChapterTableProps {
+  chapters: Chapter[]
+}
+
+export default function ChapterTable({ chapters }: ChapterTableProps) {
+  
   return (
     <div className="mt-6">
       <h2 className="text-2xl font-bold">Capítulos</h2>
@@ -19,7 +31,7 @@ export default function ChapterTable({ chapters }) {
               <td className="border px-4 py-2">{chapter.date}</td>
               <td className="border px-4 py-2">
                 <img
-                  src={chapter.growthImage}
+                  src={chapter.image}
                   alt="Crescimento"
                   className="w-8 h-8 rounded-full"
                 />
