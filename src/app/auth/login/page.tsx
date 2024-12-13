@@ -9,10 +9,12 @@ import { Button } from "@/components/ui/button";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Separator } from "@/components/ui/separator";
 import { signInFormSchema } from "@/schemas/FormSchemas";
+import { useRouter, usePathname } from "next/navigation";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 
 const Login: React.FC = () => {
   const [isPending, startTransition] = useTransition();
+  const router = useRouter();
 
   const form = useForm<z.infer<typeof signInFormSchema>>({
     resolver: zodResolver(signInFormSchema),
@@ -23,10 +25,16 @@ const Login: React.FC = () => {
   });
 
   async function handleSubmit(values: z.infer<typeof signInFormSchema>) {
-    startTransition(() => {
-      login(values);
-    });
+    // Validação simples: verifica se ambos os campos estão preenchidos
+    if (!values.email || !values.password) {
+      alert("Por favor, preencha todos os campos.");
+      return;
+    }
+  
+    // Se os campos estiverem preenchidos, redireciona para a home
+    router.push("/home");
   }
+
 
   return (
     <div className="relative bg-[url('/images/background_escuro.png')] bg-cover bg-center min-h-screen flex items-center justify-center">
@@ -35,7 +43,7 @@ const Login: React.FC = () => {
       <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
         
         <div className="absolute top-4 right-4 text-white text-sm z-10">
-          <a href="#" className="hover:text-red-500">
+          <a href="#" className="hover:text-red-500" onClick={() => router.push('/auth/register')}>
             Não tem uma conta? Crie uma agora mesmo!
           </a>
         </div>

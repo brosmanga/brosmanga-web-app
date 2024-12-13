@@ -36,7 +36,7 @@ const Header: React.FC = () => {
           <button className={`border-2 border-red-500 ${activeRedButton("about")} text-white py-1 px-4 rounded-full hover:bg-red-500 hover:text-white`} onClick={() => router.push('/about')}>
             Sobre
           </button>
-          <button className="bg-yellow-500 text-black py-1 px-4 rounded-full hover:bg-yellow-400 font-semibold">
+          <button className="bg-yellow-500 text-black py-1 px-4 rounded-full hover:bg-yellow-400 font-semibold" onClick={() => router.push('/post')}>
             Postar!
           </button>
         </nav>
@@ -59,29 +59,24 @@ const Header: React.FC = () => {
             >
               {/* Informações do usuário */}
               <div className="px-4 py-2 border-b border-gray-700">
-                <p className="text-sm font-bold">Fabiano Barros Rocha</p>
-                <p className="text-xs text-red-500">@berzerkzs</p>
+                <p className="text-sm font-bold">Marcos Paulo Silva de Souza</p>
+                <p className="text-xs text-red-500">@zzayaya</p>
               </div>
 
               {/* Links do Menu */}
               <ul className="py-2 space-y-1 text-sm">
                 <li>
-                  <button className="w-full text-left px-4 py-2 hover:bg-gray-700">
+                  <button className="w-full text-left px-4 py-2 hover:bg-gray-700" onClick={() => router.push('/profile')}>
                     Perfil
                   </button>
                 </li>
                 <li>
-                  <button className="w-full text-left px-4 py-2 hover:bg-gray-700">
-                    Configurações
+                  <button className="w-full text-left px-4 py-2 hover:bg-gray-700" onClick={() => router.push('/profile')}>
+                    Configuração
                   </button>
                 </li>
                 <li>
-                  <button className="w-full text-left px-4 py-2 hover:bg-gray-700">
-                    Histórico
-                  </button>
-                </li>
-                <li>
-                  <button className="w-full text-left px-4 py-2 hover:bg-gray-700">
+                  <button className="w-full text-left px-4 py-2 hover:bg-gray-700" onClick={() => router.push('/feedback')}>
                     Feedback
                   </button>
                 </li>
@@ -89,7 +84,7 @@ const Header: React.FC = () => {
 
               {/* Logout */}
               <div className="border-t border-gray-700">
-                <button className="w-full text-left px-4 py-2 text-red-500 hover:bg-gray-700">
+                <button className="w-full text-left px-4 py-2 text-red-500 hover:bg-gray-700" onClick={() => router.push('/auth/login')}>
                   Logout
                 </button>
               </div>
