@@ -71,7 +71,7 @@ const Header: React.FC = () => {
                   </button>
                 </li>
                 <li>
-                  <button className="w-full text-left px-4 py-2 hover:bg-gray-700" onClick={() => router.push('/profile')}>
+                  <button className="w-full text-left px-4 py-2 hover:bg-gray-700" onClick={() => router.push('/conf')}>
                     Configuração
                   </button>
                 </li>
