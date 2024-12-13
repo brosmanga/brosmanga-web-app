@@ -22,9 +22,10 @@ async function fetchManga(id: string) {
     description: "Um jovem chamado Kengo Kosaka sofre de misofobia extrema. Devido ao seu transtorno compulsivo, ele não consegue manter um relacionamento com ninguém. Kengo também é um jovem solitário. Enquanto isso, a estudante do ensino médio Hijiri Sanagi tem escopofobia.",
     chapters: [
       {
+        id: 1,
         title: "Capítulo 1",
         date: "27 de Agosto de 2012",
-        image: "/path-to-growth-image.jpg"
+        image: "/images/series/chapters/parasite_in_love/1/1-o.jpg"
       }
     ],
     recommendations: [
@@ -76,7 +77,7 @@ export default async function Page({ params }: MangaDetailsPageProps) {
             </div>
 
             {/* Capítulos */}
-            <ChapterTable chapters={manga.chapters} />
+            <ChapterTable chapters={manga.chapters}/>
 
             {/* Recomendações */}
             <div className="mt-6">

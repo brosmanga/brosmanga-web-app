@@ -10,9 +10,11 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Separator } from "@/components/ui/separator";
 import { signInFormSchema } from "@/schemas/FormSchemas";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { useRouter, usePathname } from "next/navigation";
 
 const Login: React.FC = () => {
   const [isPending, startTransition] = useTransition();
+  const router = useRouter();
 
   const registrationSchema = z.object({
     name: z.string().nonempty("O nome é obrigatório"),
@@ -37,10 +39,15 @@ const Login: React.FC = () => {
     },
   });
 
-  async function handleSubmit(values: z.infer<typeof signInFormSchema>) {
-    startTransition(() => {
-      login(values);
-    });
+  async function handleSubmit(values: z.infer<typeof registrationSchema>) {
+    // Validação simples: verifica se ambos os campos estão preenchidos
+    if (!values.email || !values.password || !values.birthDate || !values.confirmPassword || !values.name || !values.username || !values.phone) {
+      alert("Por favor, preencha todos os campos.");
+      return;
+    }
+  
+    // Se os campos estiverem preenchidos, redireciona para a home
+    router.push("/home");
   }
 
   return (
